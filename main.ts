@@ -1,3 +1,6 @@
+// Tiny stack VM for make.fun tiny-stack-vm-01-run-20261122.
+// Runs each program.bin against its input.bin and writes stdout.bin + exit.txt per instance.
+// 32-bit wrapping integers, a 256-value stack, 256 words of memory, and ten traps with their own exit codes.
 import{mkdirSync,readdirSync,readFileSync,writeFileSync}from'node:fs';
 import{join}from'node:path';
 const I=process.env.MAKEFUN_INPUT_DIR??'/input',O=process.env.MAKEFUN_OUTPUT_DIR??'/output';
